@@ -1,0 +1,19 @@
+{
+ "npm:@linear-b/mcp": {
+  "exists": false,
+  "readAt": "2026-10-24"
+ },
+ "npm:paypal-rest-sdk": {
+  "exists": true,
+  "versions": [
+   "1.8.0",
+   "1.8.1"
+  ],
+  "deprecated": {
+   "1.8.0": "Package no longer supported.",
+   "1.8.1": "Package no longer supported."
+  },
+  "latest": "1.8.1",
+  "readAt": "2026-10-24"
+ }
+}

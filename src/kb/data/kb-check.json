@@ -1,0 +1,295 @@
+{
+ "checkedAt": "2026-10-24T10:43:14.091Z",
+ "results": [
+  {
+   "source": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+   "quote": "This value is now deprecated in favor of max_completion_tokens, and is not compatible with",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+   "quote": "This value is now deprecated in favor of max_completion_tokens",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+   "quote": "Deprecated in favor of tools.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/openai/openai-python/main/src/openai/lib/_old_api.py",
+   "quote": "but this is no longer supported in openai>=1.0.0",
+   "result": "found"
+  },
+  {
+   "source": "https://github.com/openai/openai-node/discussions/217",
+   "quote": "v4 is a complete rewrite of the SDK",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.openai.com/api/docs/deprecations",
+   "quote": "On August 26th, 2025, we notified developers using the Assistants API of its deprecation and removal from the API one year later, on August 26, 2026.",
+   "result": "found"
+  },
+  {
+   "source": "https://github.com/openai/openai-go/blob/main/MIGRATION.md",
+   "quote": "To reduce verbosity, the `openai.F(...)` and `param.Field[T]` have been removed.",
+   "result": "found"
+  },
+  {
+   "source": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide",
+   "quote": "Sampling parameters return an error. Remove temperature, top_p, and top_k.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/main/MIGRATION.md",
+   "quote": "Current models do not use these sampling parameters",
+   "result": "found"
+  },
+  {
+   "source": "https://platform.claude.com/docs/en/api/migration-2026-10-21",
+   "quote": "a request that sends temperature, top_p, or top_k returns a 400 error, even at the parameter's default value.",
+   "result": "found"
+  },
+  {
+   "source": "https://platform.claude.com/docs/en/models/opus-5-5/migration-guide",
+   "quote": "is no longer supported on Claude Opus 4.7 and later models and returns a 400 error.",
+   "result": "found"
+  },
+  {
+   "source": "https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide",
+   "quote": "as a deprecated setting.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/main/MIGRATION.md",
+   "quote": "client.completions.create() (the /v1/complete endpoint)",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/google-gemini/deprecated-generative-ai-python/main/README.md",
+   "quote": "All support for this repository ended permanently on November 30, 2025.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/google-gemini/deprecated-generative-ai-js/main/README.md",
+   "quote": "Please be advised that this repository is now considered legacy.",
+   "result": "found"
+  },
+  {
+   "source": "https://github.com/google-gemini/generative-ai-android",
+   "quote": "We don't plan to add anything to this SDK or making any further changes.",
+   "result": "found"
+  },
+  {
+   "source": "https://api-docs.deepseek.com/updates/#date-2026-04-24",
+   "quote": "The two legacy API model names, deepseek-chat and deepseek-reasoner, will be discontinued in three months (2026-07-24).",
+   "result": "found"
+  },
+  {
+   "source": "https://www.assemblyai.com/changelog",
+   "quote": "The legacy Summarization model (the top-level summarization boolean and summary_model parameter) and the legacy Auto Chapters model are deprecated.",
+   "result": "found"
+  },
+  {
+   "source": "https://www.assemblyai.com/changelog",
+   "quote": "LeMUR will be deprecated on March 31, 2026 and will no longer work after this date.",
+   "result": "found"
+  },
+  {
+   "source": "https://www.assemblyai.com/changelog",
+   "quote": "Passing a current model name ( universal-2 , universal-3-5-pro ) to the async speech_model field now returns a 400.",
+   "result": "found"
+  },
+  {
+   "source": "https://core.telegram.org/bots/api-changelog",
+   "quote": "replaced the parameter disable_web_page_preview with link_preview_options in the methods sendMessage and editMessageText.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/python-telegram-bot/python-telegram-bot/master/changes/22.0_2025-03-15/4671.7B3boYRvHdGzsrZgkpKp7B.toml",
+   "quote": "Removed Defaults.disable_web_page_preview and Defaults.quote.",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.slack.dev/reference/methods/files.upload",
+   "quote": "The files.upload API method has been deprecated. It will stop functioning and be officially sunset on November 12, 2025.",
+   "result": "found"
+  },
+  {
+   "source": "https://github.com/firebase/firebase-admin-node/releases/tag/v13.0.0",
+   "quote": "change(fcm): Remove deprecated FCM APIs",
+   "result": "found"
+  },
+  {
+   "source": "https://github.com/firebase/firebase-admin-node/releases/tag/v14.0.0",
+   "quote": "change: Remove Deprecated Legacy Namespace Support",
+   "result": "found"
+  },
+  {
+   "source": "https://resend.com/docs/dashboard/contacts/migrating-from-audiences-to-segments",
+   "quote": "The Audiences API is now deprecated and will be removed in the future.",
+   "result": "found"
+  },
+  {
+   "source": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/migrations",
+   "quote": "Developers using LinkedIn Marketing APIs unversioned to migrate to the latest versions.",
+   "result": "found"
+  },
+  {
+   "source": "https://learn.microsoft.com/en-us/linkedin/marketing/versioning",
+   "quote": "These API versions are supported and stable for a minimum of one year before sunset.",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.x.com/changelog",
+   "quote": "Today, we are deprecating the search/tweets, users/search, and geo/search endpoints in the X API v1.1.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.google.com/youtube/v3/revision_history",
+   "quote": "The search.list method's relatedToVideoId parameter has been deprecated. YouTube will stop supporting the parameter as of August 7, 2023.",
+   "result": "found"
+  },
+  {
+   "source": "https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api",
+   "quote": "Effective today, new Web API use cases will no longer be able to access or use the following endpoints and functionality in their third-party applications.",
+   "result": "found"
+  },
+  {
+   "source": "https://developer.spotify.com/documentation/web-api/tutorials/february-2026-migration-guide",
+   "quote": "The playlist track management endpoints have been renamed from /tracks to /items",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.stripe.com/changelog/clover/2025-09-30/remove-redirect-to-checkout",
+   "quote": "The stripe.redirectToCheckout method is no longer supported in Stripe.js.",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.stripe.com/sources",
+   "quote": "We’ve deprecated the Sources API and plan to remove support.",
+   "result": "found"
+  },
+  {
+   "source": "https://registry.npmjs.org/paypal-rest-sdk",
+   "quote": "Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead",
+   "result": "found"
+  },
+  {
+   "source": "https://registry.npmjs.org/@paypal/checkout-server-sdk",
+   "quote": "Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead",
+   "result": "found"
+  },
+  {
+   "source": "https://developer.paypal.com/api/deprecated/payments/v1/",
+   "quote": "Deprecation notice: The /v1/payments endpoint is deprecated.",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.cdp.coinbase.com/coinbase-app/authentication-authorization/legacy-keys",
+   "quote": "In February, 2025, we expired all legacy API keys. Create new CDP API keys and update your code to continue using Coinbase App APIs.",
+   "result": "found"
+  },
+  {
+   "source": "https://kb.etherscan.com/etherscan-api-v1-will-be-fully-deprecated-by-15th-august-2025",
+   "quote": "API V1 will be fully deprecated by August 15, 2025 . After that, all V1 requests will stop working.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.jup.ag/docs/portal/migration",
+   "quote": "lite-api.jup.ag will be phased out once the new API gateway is stable.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.jup.ag/changelog/2025-06",
+   "quote": "If you are on Price API V2 or Tokens API V1, migrate to the new versions before 30 September 2025.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/lineofflight/frankfurter/main/CHANGELOG.md",
+   "quote": "Moved domain to <https://api.frankfurter.dev>.",
+   "result": "found"
+  },
+  {
+   "source": "https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement",
+   "quote": "Bing Search APIs will be retired on August 11, 2025. Any existing instances of Bing Search APIs will be decommissioned completely",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.google.com/custom-search/v1/overview",
+   "quote": "The Custom Search JSON API is closed to new customers.",
+   "result": "found"
+  },
+  {
+   "source": "https://openweathermap.org/api/one-call-api",
+   "quote": "The One Call API, endpoint version 2.5, has been deprecated as of June 2024.",
+   "result": "found"
+  },
+  {
+   "source": "https://openweathermap.org/api/current",
+   "quote": "Please note that API requests by city name, zip-codes and city id have been deprecated.",
+   "result": "found"
+  },
+  {
+   "source": "https://docs.openaq.org/about/about",
+   "quote": "The OpenAQ version 1 and version 2 endpoints were retired on January 31, 2025 and are no longer accessible.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.google.com/analytics/devguides/reporting/core/v4",
+   "quote": "Universal Analytics has sunset and is no longer available as of July 1, 2024.",
+   "result": "found"
+  },
+  {
+   "source": "https://www.usps.com/business/web-tools-apis/welcome.htm",
+   "quote": "The USPS Web Tools API platform was retired on January 25, 2026 and service disruptions are underway.",
+   "result": "found"
+  },
+  {
+   "source": "https://learn.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0",
+   "quote": "The legacy alerts API is deprecated and will be retired on October 15, 2026.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.hubspot.com/changelog/legacy-apis-and-legacy-apps-whats-going-unsupported-and-when",
+   "quote": "Endpoints using numbered version paths, /v1/ , /v2/ , and /v3/ , will move to unsupported status.",
+   "result": "found"
+  },
+  {
+   "source": "https://developers.google.com/identity/sign-in/web/deprecation-and-sunset",
+   "quote": "New OAuth Client IDs cannot use the deprecated library,",
+   "result": "found"
+  },
+  {
+   "source": "https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+   "quote": "Reclassify the HTTP+SSE transport (deprecated since protocol version",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/docs/migration.md",
+   "quote": "streamablehttp_client removed",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/docs/migration.md",
+   "quote": "Importing mcp.server.fastmcp, or anything below it, raises ModuleNotFoundError",
+   "result": "found"
+  },
+  {
+   "source": "https://linear.app/docs/mcp",
+   "quote": "The SSE endpoint at https://mcp.linear.app/sse is a deprecated fallback for clients that do not support Streamable HTTP.",
+   "result": "found"
+  },
+  {
+   "source": "https://raw.githubusercontent.com/a2aproject/a2a-js/main/docs/migration-guide.md",
+   "quote": "`A2AClient` was deprecated in v0.3 in favor of `ClientFactory` and `Client`",
+   "result": "found"
+  },
+  {
+   "source": "https://a2a-protocol.org/latest/whats-new-v1/",
+   "quote": "RENAMED: Operation now SendMessage",
+   "result": "found"
+  }
+ ]
+}

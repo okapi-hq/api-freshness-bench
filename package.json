@@ -1,0 +1,34 @@
+{
+  "name": "okapi-bench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Okapi Bench: do AI models write API integrations that still work? By Okapi, https://okapi.bot",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts && python3 -m unittest discover -s kaggle",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "grade": "node src/kaggle/grade-jsonl.ts",
+    "kaggle:export": "node src/kaggle/export-tasks.ts",
+    "kaggle:build": "node src/kaggle/export-tasks.ts && python3 kaggle/build.py",
+    "kb:check": "node src/kb/check.ts",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/semver": "^7.8.0",
+    "husky": "^9.1.7",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "semver": "^7.8.5"
+  },
+  "homepage": "https://okapi.bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okapi-hq/api-freshness-bench"
+  },
+  "license": "MIT"
+}
