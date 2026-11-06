@@ -24,7 +24,7 @@ The knowledge base is dated. This edition judges the code as of October 24, 2026
 - `kaggle/grader`: the same grader in Python, which is what runs on Kaggle. It gives the same verdict and the same findings as the TypeScript one on every answer we've compared, and the tests hold it to that.
 - `kaggle/tasks.json`: the tasks as JSON, exported from `src/tasks`.
 - `kaggle/build.py`: writes one Kaggle task per benchmark task. Each file carries its prompt, its facts and the whole grader, so what runs on Kaggle can be read on Kaggle.
-- `kaggle/queue.py`: runs every task on every model, a few at a time, within Kaggle's daily quota. `kaggle/collect.py` downloads the answers as JSONL for the TypeScript grader.
+- `kaggle/queue_runs.py`: runs every task on every model, a few at a time, within Kaggle's daily quota. `kaggle/reserves.py` works out what Kaggle holds back for each model's requests, so the queue can spend the whole quota. `kaggle/collect.py` downloads the answers as JSONL for the TypeScript grader.
 
 ## Run it
 
