@@ -5,7 +5,7 @@
 Skips the task and model pairs already in `--done` (from kaggle/collect.py) and
 stops when the day's remaining Model Proxy quota drops below `--keep` dollars.
 Runs are started, not awaited: collect them later with kaggle/collect.py, or let
-kaggle/queue.py do both.
+kaggle/queue_runs.py do both.
 """
 
 import argparse

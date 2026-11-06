@@ -13,6 +13,8 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 
 import build  # noqa: E402
+import queue_runs  # noqa: E402
+import reserves  # noqa: E402
 from grader.grade import grade_answer  # noqa: E402
 from grader.jsregex import js  # noqa: E402
 from grader.ranges import max_satisfying, valid_range  # noqa: E402
@@ -75,6 +77,23 @@ class Grader(unittest.TestCase):
                 key = lambda f: (f["slot"], f["rule"] or "", f["label"], f["verdict"])  # noqa: E731
                 self.assertEqual(sorted(map(key, py["findings"])), sorted(map(key, ref["findings"])), ref["id"])
                 self.assertEqual((py["verdict"], py["missing"], py["warned"]), (ref["verdict"], ref["missing"], ref["warned"]))
+
+
+class Queue(unittest.TestCase):
+    def test_the_days_last_dollars_go_to_cheaper_models(self):
+        eligible = [("t1", "opus"), ("t2", "opus"), ("t1", "flash"), ("t2", "flash")]
+        cost = {"opus": 0.7, "flash": 0.1}.get
+        self.assertEqual(queue_runs.within_budget(eligible, cost, 5.0, 3), [("t1", "opus"), ("t2", "opus"), ("t1", "flash")])
+        self.assertEqual(queue_runs.within_budget(eligible, cost, 0.75, 12), [("t1", "opus")])
+        self.assertEqual(queue_runs.within_budget(eligible, cost, 0.5, 12), [("t1", "flash"), ("t2", "flash")])
+        self.assertEqual(queue_runs.within_budget(eligible, cost, 0.05, 12), [])
+
+    def test_kaggle_slugs_find_their_models_dev_price(self):
+        catalog = {"anthropic": {"models": {"claude-opus-5-5": {"cost": {"input": 4, "output": 20}}}},
+                   "openai": {"models": {"gpt-5.4": {"cost": {"input": 2.5, "output": 15}}}}}
+        self.assertEqual(reserves.price_of(catalog, "claude-opus-5-5-default")["output"], 20)
+        self.assertEqual(reserves.price_of(catalog, "gpt-5.4-2026-03-05")["output"], 15)
+        self.assertIsNone(reserves.price_of(catalog, "gemma-4-31b-it"))
 
 
 class Build(unittest.TestCase):
