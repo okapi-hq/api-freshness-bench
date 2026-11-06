@@ -96,6 +96,14 @@ export const DATA_TASKS: Task[] = [
           deprecated(undefined, OWM_CURRENT, { quote: 'Please note that API requests by city name, zip-codes and city id have been deprecated.' }),
           { unless: ['lookup.geocoding'] },
         ),
+        // The same query as a keyword argument, passed on to the request (`fetch("weather", q=city)`).
+        rule(
+          'city-name-kwarg',
+          'q=<city> on /data/2.5 (built-in geocoder)',
+          '(?<![\\w.])q\\s*=\\s*(?:city|city_name|name|location|query|args\\.\\w+)\\b',
+          deprecated(undefined, OWM_CURRENT, { quote: 'Please note that API requests by city name, zip-codes and city id have been deprecated.' }),
+          { unless: ['lookup.geocoding'] },
+        ),
         rule('geocoding', 'Geocoding API, then lat/lon', 'geo/1\\.0/direct', current(OWM_CURRENT)),
       ]),
     ],

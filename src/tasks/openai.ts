@@ -1,9 +1,15 @@
-import type { Rule, Task } from '../types.ts';
+import { readFileSync } from 'node:fs';
+import type { Rule, Slot, Task } from '../types.ts';
 import { deprecated, invalid } from '../kb/facts.ts';
-import { OPENAI_MODEL_RULES, openaiModelSlot, openaiParamSlot, openaiSdkSlot } from '../kb/openai.ts';
+import { OPENAI_CANDIDATE, OPENAI_MODEL_RULES, openaiModelSlot, openaiParamSlot, openaiSdkSlot } from '../kb/openai.ts';
 import { rule, slot } from '../kb/rule.ts';
 
-/** Go constants that name OpenAI models: sashabaranov/go-openai and the official openai-go. */
+/** The official openai-go SDK's ChatModel constants, read from its source (`kb/data/openai-go-chatmodels-*.json`). */
+const OPENAI_GO: { constants: Record<string, string> } = JSON.parse(
+  readFileSync(new URL('../kb/data/openai-go-chatmodels-2026-11-06.json', import.meta.url), 'utf8'),
+);
+
+/** Go constants that name OpenAI models: sashabaranov/go-openai, and older openai-go names. */
 const GO_CONSTANTS: Record<string, string> = {
   GPT3Dot5Turbo: 'gpt-3.5-turbo',
   GPT4: 'gpt-4',
@@ -41,12 +47,19 @@ const GO_CONSTANTS: Record<string, string> = {
   ChatModelGPT5_2: 'gpt-5.2',
 };
 
+/** One rule per Go constant whose model the knowledge base knows; the others are caught as unknown values. */
 function goConstantRules(): Rule[] {
-  return Object.entries(GO_CONSTANTS).map(([name, id]) => {
+  const all = { ...OPENAI_GO.constants, ...GO_CONSTANTS };
+  return Object.entries(all).flatMap(([name, id]) => {
     const model = OPENAI_MODEL_RULES.find((r) => r.id === id);
-    if (!model) throw new Error(`no OpenAI model ${id}`);
-    return rule(`go:${name}`, `${name} (${id})`, `(?:openai|shared)\\.${name}(?![\\w])`, model.fact);
+    return model ? [rule(`go:${name}`, `${name} (${id})`, `(?:openai|shared)\\.${name}(?![\\w])`, model.fact)] : [];
   });
+}
+
+/** The model slot for Go: a constant the knowledge base doesn't list is a value to review, not a missing model. */
+function goModelSlot(): Slot {
+  const constant = '(?:openai|shared)\\.ChatModel\\w+|openai\\.(?:GPT\\d|O\\d)\\w*';
+  return { ...openaiModelSlot(goConstantRules()), candidate: `${OPENAI_CANDIDATE}|${constant}` };
 }
 
 const GO_F = rule(
@@ -127,6 +140,6 @@ export const OPENAI_TASKS: Task[] = [
     prompt:
       'Write a Go CLI that reads the output of `git diff --staged` and asks OpenAI to write a conventional commit message for it, then prints the message.',
     evidence: "openai-go 1.0 removed the openai.F helpers older Go examples use, and the chat models Go code usually names, gpt-4o-mini and gpt-4o, retire on 2027-01-14.",
-    slots: [openaiModelSlot(goConstantRules()), openaiParamSlot(), slot('go-sdk', 'Go SDK', [GO_F])],
+    slots: [goModelSlot(), openaiParamSlot(), slot('go-sdk', 'Go SDK', [GO_F])],
   },
 ];
