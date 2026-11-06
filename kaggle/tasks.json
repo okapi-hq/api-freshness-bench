@@ -7009,6 +7009,702 @@
        }
       },
       {
+       "id": "go:ChatModelGPT6Astra",
+       "label": "ChatModelGPT6Astra (gpt-6-astra)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT6Astra(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-09-04"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT6_1Sol",
+       "label": "ChatModelGPT6_1Sol (gpt-6.1-sol)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT6_1Sol(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-09-29"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT6Sol",
+       "label": "ChatModelGPT6Sol (gpt-6-sol)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT6Sol(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-09-22"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT6Luna",
+       "label": "ChatModelGPT6Luna (gpt-6-luna)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT6Luna(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-09-22"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_6Sol",
+       "label": "ChatModelGPT5_6Sol (gpt-5.6-sol)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_6Sol(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-07-09"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_6Terra",
+       "label": "ChatModelGPT5_6Terra (gpt-5.6-terra)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_6Terra(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-07-09"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_6Luna",
+       "label": "ChatModelGPT5_6Luna (gpt-5.6-luna)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_6Luna(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-07-09"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_5",
+       "label": "ChatModelGPT5_5 (gpt-5.5)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_5(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-04-23"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_4",
+       "label": "ChatModelGPT5_4 (gpt-5.4)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_4(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-03-05"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_4Mini",
+       "label": "ChatModelGPT5_4Mini (gpt-5.4-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_4Mini(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2026-03-17"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_4Nano",
+       "label": "ChatModelGPT5_4Nano (gpt-5.4-nano)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_4Nano(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-04-01",
+        "announced": "2026-10-01",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_3ChatLatest",
+       "label": "ChatModelGPT5_3ChatLatest (gpt-5.3-chat-latest)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_3ChatLatest(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-08-10",
+        "announced": "2026-05-08",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_2",
+       "label": "ChatModelGPT5_2 (gpt-5.2)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_2(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2025-12-11"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_2ChatLatest",
+       "label": "ChatModelGPT5_2ChatLatest (gpt-5.2-chat-latest)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_2ChatLatest(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-08-10",
+        "announced": "2026-05-08",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_2Pro",
+       "label": "ChatModelGPT5_2Pro (gpt-5.2-pro)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_2Pro(?![\\w])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi",
+        "released": "2025-12-11"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_1",
+       "label": "ChatModelGPT5_1 (gpt-5.1)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_1(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-04-01",
+        "announced": "2026-10-01",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_1Codex",
+       "label": "ChatModelGPT5_1Codex (gpt-5.1-codex)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_1Codex(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-07-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_1ChatLatest",
+       "label": "ChatModelGPT5_1ChatLatest (gpt-5.1-chat-latest)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_1ChatLatest(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-07-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5",
+       "label": "ChatModelGPT5 (gpt-5)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-12-11",
+        "announced": "2026-06-11",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5Mini",
+       "label": "ChatModelGPT5Mini (gpt-5-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5Mini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-12-11",
+        "announced": "2026-06-11",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5Nano",
+       "label": "ChatModelGPT5Nano (gpt-5-nano)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5Nano(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-12-11",
+        "announced": "2026-06-11",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5_2025_08_07",
+       "label": "ChatModelGPT5_2025_08_07 (gpt-5-2025-08-07)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5_2025_08_07(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-12-11",
+        "announced": "2026-06-11",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT5ChatLatest",
+       "label": "ChatModelGPT5ChatLatest (gpt-5-chat-latest)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT5ChatLatest(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-07-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1",
+       "label": "ChatModelGPT4_1 (gpt-4.1)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1Mini",
+       "label": "ChatModelGPT4_1Mini (gpt-4.1-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Mini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1Nano",
+       "label": "ChatModelGPT4_1Nano (gpt-4.1-nano)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Nano(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1_2025_04_14",
+       "label": "ChatModelGPT4_1_2025_04_14 (gpt-4.1-2025-04-14)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1_2025_04_14(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1Mini2025_04_14",
+       "label": "ChatModelGPT4_1Mini2025_04_14 (gpt-4.1-mini-2025-04-14)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Mini2025_04_14(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1Nano2025_04_14",
+       "label": "ChatModelGPT4_1Nano2025_04_14 (gpt-4.1-nano-2025-04-14)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Nano2025_04_14(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO4Mini",
+       "label": "ChatModelO4Mini (o4-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelO4Mini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO3",
+       "label": "ChatModelO3 (o3)",
+       "pattern": "(?:openai|shared)\\.ChatModelO3(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-12-11",
+        "announced": "2026-06-11",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO3Mini",
+       "label": "ChatModelO3Mini (o3-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelO3Mini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO1",
+       "label": "ChatModelO1 (o1)",
+       "pattern": "(?:openai|shared)\\.ChatModelO1(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO1Preview",
+       "label": "ChatModelO1Preview (o1-preview)",
+       "pattern": "(?:openai|shared)\\.ChatModelO1Preview(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2025-07-28",
+        "announced": "2025-04-28",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelO1Mini",
+       "label": "ChatModelO1Mini (o1-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelO1Mini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2025-10-27",
+        "announced": "2025-04-28",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4o",
+       "label": "ChatModelGPT4o (gpt-4o)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4o(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4o2024_11_20",
+       "label": "ChatModelGPT4o2024_11_20 (gpt-4o-2024-11-20)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4o2024_11_20(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4o2024_08_06",
+       "label": "ChatModelGPT4o2024_08_06 (gpt-4o-2024-08-06)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4o2024_08_06(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4o2024_05_13",
+       "label": "ChatModelGPT4o2024_05_13 (gpt-4o-2024-05-13)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4o2024_05_13(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelChatgpt4oLatest",
+       "label": "ChatModelChatgpt4oLatest (chatgpt-4o-latest)",
+       "pattern": "(?:openai|shared)\\.ChatModelChatgpt4oLatest(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-02-17",
+        "announced": "2025-11-18",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4oMini",
+       "label": "ChatModelGPT4oMini (gpt-4o-mini)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4oMini(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4oMini2024_07_18",
+       "label": "ChatModelGPT4oMini2024_07_18 (gpt-4o-mini-2024-07-18)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4oMini2024_07_18(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2027-01-14",
+        "announced": "2026-10-14",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4Turbo",
+       "label": "ChatModelGPT4Turbo (gpt-4-turbo)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4Turbo(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4Turbo2024_04_09",
+       "label": "ChatModelGPT4Turbo2024_04_09 (gpt-4-turbo-2024-04-09)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4Turbo2024_04_09(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_0125Preview",
+       "label": "ChatModelGPT4_0125Preview (gpt-4-0125-preview)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_0125Preview(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-03-26",
+        "announced": "2025-09-26",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4TurboPreview",
+       "label": "ChatModelGPT4TurboPreview (gpt-4-turbo-preview)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4TurboPreview(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-03-26",
+        "announced": "2025-09-26",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_1106Preview",
+       "label": "ChatModelGPT4_1106Preview (gpt-4-1106-preview)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1106Preview(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4VisionPreview",
+       "label": "ChatModelGPT4VisionPreview (gpt-4-vision-preview)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4VisionPreview(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2024-12-06",
+        "announced": "2024-06-06",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4",
+       "label": "ChatModelGPT4 (gpt-4)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_0314",
+       "label": "ChatModelGPT4_0314 (gpt-4-0314)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_0314(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-03-26",
+        "announced": "2025-09-26",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_0613",
+       "label": "ChatModelGPT4_0613 (gpt-4-0613)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_0613(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT4_32k",
+       "label": "ChatModelGPT4_32k (gpt-4-32k)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT4_32k(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2025-06-06",
+        "announced": "2024-06-06",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo",
+       "label": "ChatModelGPT3_5Turbo (gpt-3.5-turbo)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo16k",
+       "label": "ChatModelGPT3_5Turbo16k (gpt-3.5-turbo-16k)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo16k(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2024-09-13",
+        "announced": "2023-11-06",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo0301",
+       "label": "ChatModelGPT3_5Turbo0301 (gpt-3.5-turbo-0301)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo0301(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2024-09-13",
+        "announced": "2023-06-13",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo0613",
+       "label": "ChatModelGPT3_5Turbo0613 (gpt-3.5-turbo-0613)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo0613(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2024-09-13",
+        "announced": "2023-11-06",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo1106",
+       "label": "ChatModelGPT3_5Turbo1106 (gpt-3.5-turbo-1106)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo1106(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-09-28",
+        "announced": "2025-09-26",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo0125",
+       "label": "ChatModelGPT3_5Turbo0125 (gpt-3.5-turbo-0125)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo0125(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2026-10-23",
+        "announced": "2026-04-22",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
+       "id": "go:ChatModelGPT3_5Turbo16k0613",
+       "label": "ChatModelGPT3_5Turbo16k0613 (gpt-3.5-turbo-16k-0613)",
+       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo16k0613(?![\\w])",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2024-09-13",
+        "announced": "2023-11-06",
+        "source": "https://developers.openai.com/api/docs/deprecations",
+        "origin": "okapi"
+       }
+      },
+      {
        "id": "go:GPT3Dot5Turbo",
        "label": "GPT3Dot5Turbo (gpt-3.5-turbo)",
        "pattern": "(?:openai|shared)\\.GPT3Dot5Turbo(?![\\w])",
@@ -7211,212 +7907,9 @@
         "source": "https://developers.openai.com/api/docs/deprecations",
         "origin": "okapi"
        }
-      },
-      {
-       "id": "go:ChatModelGPT3_5Turbo",
-       "label": "ChatModelGPT3_5Turbo (gpt-3.5-turbo)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT3_5Turbo(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4",
-       "label": "ChatModelGPT4 (gpt-4)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4Turbo",
-       "label": "ChatModelGPT4Turbo (gpt-4-turbo)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4Turbo(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4o",
-       "label": "ChatModelGPT4o (gpt-4o)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4o(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2027-01-14",
-        "announced": "2026-10-14",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4oMini",
-       "label": "ChatModelGPT4oMini (gpt-4o-mini)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4oMini(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2027-01-14",
-        "announced": "2026-10-14",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4_1",
-       "label": "ChatModelGPT4_1 (gpt-4.1)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2027-01-14",
-        "announced": "2026-10-14",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4_1Mini",
-       "label": "ChatModelGPT4_1Mini (gpt-4.1-mini)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Mini(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2027-01-14",
-        "announced": "2026-10-14",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT4_1Nano",
-       "label": "ChatModelGPT4_1Nano (gpt-4.1-nano)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT4_1Nano(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelO1",
-       "label": "ChatModelO1 (o1)",
-       "pattern": "(?:openai|shared)\\.ChatModelO1(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelO3Mini",
-       "label": "ChatModelO3Mini (o3-mini)",
-       "pattern": "(?:openai|shared)\\.ChatModelO3Mini(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelO3",
-       "label": "ChatModelO3 (o3)",
-       "pattern": "(?:openai|shared)\\.ChatModelO3(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-12-11",
-        "announced": "2026-06-11",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelO4Mini",
-       "label": "ChatModelO4Mini (o4-mini)",
-       "pattern": "(?:openai|shared)\\.ChatModelO4Mini(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-10-23",
-        "announced": "2026-04-22",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT5",
-       "label": "ChatModelGPT5 (gpt-5)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT5(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-12-11",
-        "announced": "2026-06-11",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT5Mini",
-       "label": "ChatModelGPT5Mini (gpt-5-mini)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT5Mini(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-12-11",
-        "announced": "2026-06-11",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT5Nano",
-       "label": "ChatModelGPT5Nano (gpt-5-nano)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT5Nano(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2026-12-11",
-        "announced": "2026-06-11",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT5_1",
-       "label": "ChatModelGPT5_1 (gpt-5.1)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT5_1(?![\\w])",
-       "fact": {
-        "outcome": "fails",
-        "effective": "2027-04-01",
-        "announced": "2026-10-01",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi"
-       }
-      },
-      {
-       "id": "go:ChatModelGPT5_2",
-       "label": "ChatModelGPT5_2 (gpt-5.2)",
-       "pattern": "(?:openai|shared)\\.ChatModelGPT5_2(?![\\w])",
-       "fact": {
-        "outcome": "ok",
-        "source": "https://developers.openai.com/api/docs/deprecations",
-        "origin": "okapi",
-        "released": "2025-12-11"
-       }
       }
      ],
-     "candidate": "(?<=[\"'`=:\\s/])(?<!(?:startswith|startsWith|endswith|endsWith|includes)\\([\"'`])((?:gpt-[\\w.-]+|chatgpt-[\\w.-]+|o[1-9](?:-[\\w.-]+)?|text-(?:embedding|davinci|curie|babbage|moderation)-[\\w.-]+|whisper-[\\w.-]+|tts-[\\w.-]+|dall-e-[\\w.-]+|(?:davinci|babbage)-\\d+|omni-moderation-[\\w.-]+))(?=[\"'`\\s,;)}\\]:]|$)",
+     "candidate": "(?<=[\"'`=:\\s/])(?<!(?:startswith|startsWith|endswith|endsWith|includes)\\([\"'`])((?:gpt-[\\w.-]+|chatgpt-[\\w.-]+|o[1-9](?:-[\\w.-]+)?|text-(?:embedding|davinci|curie|babbage|moderation)-[\\w.-]+|whisper-[\\w.-]+|tts-[\\w.-]+|dall-e-[\\w.-]+|(?:davinci|babbage)-\\d+|omni-moderation-[\\w.-]+))(?=[\"'`\\s,;)}\\]:]|$)|(?:openai|shared)\\.ChatModel\\w+|openai\\.(?:GPT\\d|O\\d)\\w*",
      "candidateFlags": "gm",
      "absent": "missing"
     },
@@ -20447,6 +20940,20 @@
        "id": "city-name-params",
        "label": "q=<city> on /data/2.5 (built-in geocoder)",
        "pattern": "[\"']q[\"']\\s*:[^\\n]*(?:city|name)",
+       "fact": {
+        "outcome": "keeps_working",
+        "source": "https://openweathermap.org/api/current",
+        "origin": "okapi",
+        "quote": "Please note that API requests by city name, zip-codes and city id have been deprecated."
+       },
+       "unless": [
+        "lookup.geocoding"
+       ]
+      },
+      {
+       "id": "city-name-kwarg",
+       "label": "q=<city> on /data/2.5 (built-in geocoder)",
+       "pattern": "(?<![\\w.])q\\s*=\\s*(?:city|city_name|name|location|query|args\\.\\w+)\\b",
        "fact": {
         "outcome": "keeps_working",
         "source": "https://openweathermap.org/api/current",
