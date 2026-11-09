@@ -190,6 +190,8 @@ export const COMMERCE_TASKS: Task[] = [
           deprecated('2025-11-30', JUP_MIGRATION, { quote: 'lite-api.jup.ag will be phased out once the new API gateway is stable.' }),
         ),
         rule('api-jup', 'api.jup.ag/swap', 'api\\.jup\\.ag/swap', current(JUP_MIGRATION)),
+        // The same host as a base URL, its paths joined elsewhere (`new URL("/swap/v1/quote", base)`).
+        rule('api-jup-base', 'api.jup.ag (base URL)', 'https?://api\\.jup\\.ag(?![\\w.-])', current(JUP_MIGRATION)),
         // The SDK picks the host: lite-api.jup.ag without an API key, api.jup.ag with one (@jup-ag/api 6.0.48).
         rule(
           'sdk-public',
