@@ -20701,6 +20701,16 @@
        }
       },
       {
+       "id": "api-jup-base",
+       "label": "api.jup.ag (base URL)",
+       "pattern": "https?://api\\.jup\\.ag(?![\\w.-])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://developers.jup.ag/docs/portal/migration",
+        "origin": "provider"
+       }
+      },
+      {
        "id": "sdk-public",
        "label": "lite-api.jup.ag",
        "pattern": "createJupiterApiClient\\(\\s*(?:\\)|\\{(?![^}]*apiKey))",
@@ -21110,6 +21120,16 @@
         "source": "https://www.usps.com/business/web-tools-apis/welcome.htm",
         "origin": "provider",
         "note": "api.usps.com answers like apis.usps.com (checked 2026-10-24)."
+       }
+      },
+      {
+       "id": "easypost",
+       "label": "EasyPost API (USPS rates)",
+       "pattern": "api\\.easypost\\.com/v2|easypost\\.EasyPostClient\\(",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://docs.easypost.com/docs/shipments",
+        "origin": "provider"
        }
       }
      ],

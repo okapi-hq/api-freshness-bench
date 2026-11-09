@@ -10,6 +10,7 @@ const OPENAQ = 'https://docs.openaq.org/about/about';
 const GA_V4 = 'https://developers.google.com/analytics/devguides/reporting/core/v4';
 const GA_DATA = 'https://developers.google.com/analytics/devguides/reporting/data/v1';
 const USPS = 'https://www.usps.com/business/web-tools-apis/welcome.htm';
+const EASYPOST = 'https://docs.easypost.com/docs/shipments';
 const GRAPH_ALERTS = 'https://learn.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0';
 const ADAL = 'https://learn.microsoft.com/en-us/entra/identity-platform/msal-migration';
 const HUBSPOT_KEYS = 'https://developers.hubspot.com/changelog/upcoming-api-key-sunset';
@@ -177,6 +178,8 @@ export const DATA_TASKS: Task[] = [
           }),
         ),
         rule('usps-apis', 'USPS APIs (apis.usps.com)', 'apis(?:-tem)?\\.usps\\.com|//api\\.usps\\.com', current(USPS, { note: 'api.usps.com answers like apis.usps.com (checked 2026-10-24).' })),
+        // A shipping API that quotes USPS rates is a working answer too.
+        rule('easypost', 'EasyPost API (USPS rates)', 'api\\.easypost\\.com/v2|easypost\\.EasyPostClient\\(', current(EASYPOST)),
       ]),
     ],
   },
