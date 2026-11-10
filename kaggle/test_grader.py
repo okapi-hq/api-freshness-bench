@@ -103,7 +103,7 @@ class Queue(unittest.TestCase):
         self.assertEqual(running, [("t1", "m")])
         self.assertEqual(landed, [("t4", "m")])
         self.assertEqual(unknown, {"t3"})
-        self.assertEqual(eligible, [("t2", "m"), ("t5", "m"), ("t6", "m")])
+        self.assertEqual(eligible, [("t5", "m"), ("t6", "m"), ("t2", "m")])
         self.assertEqual(tries["t4|m"], 2)
 
     def test_kaggle_slugs_find_their_models_dev_price(self):

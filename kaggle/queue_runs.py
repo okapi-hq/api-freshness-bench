@@ -73,7 +73,8 @@ def next_batch(pending: list, tries: dict, started: dict, limit: int, stuck_afte
     Only a pair started before can be running or done on Kaggle, so only those cost a status call
     (Kaggle rate-limits them). A completed one is waiting for its download: fetched, not run again.
     A run Kaggle still calls running `stuck_after` seconds after it started no longer holds the
-    queue: the pair is started again. A task whose status Kaggle didn't return is skipped this turn.
+    queue: the pair is started again, after the others. A task whose status Kaggle didn't return
+    is skipped this turn.
     """
     now = time.time()
     candidates = [p for p in pending if tries.get("|".join(p), 0) < limit]
@@ -83,12 +84,15 @@ def next_batch(pending: list, tries: dict, started: dict, limit: int, stuck_afte
     landed = [(t, m) for t, m in tried if seen[t].get(m) == "Completed"]
     for t, m in landed:
         tries[f"{t}|{m}"] = tries.get(f"{t}|{m}", 0) + 1
-    running = []
+    running, stuck = [], []
     for t, m in tried:
-        if seen[t].get(m) in RUNNING and now - started.setdefault(f"{t}|{m}", now) < stuck_after:
-            running.append((t, m))
+        if seen[t].get(m) in RUNNING:
+            fresh = now - started.setdefault(f"{t}|{m}", now) < stuck_after
+            (running if fresh else stuck).append((t, m))
     skip = set(landed) | set(running) | {p for p in tried if p[0] in unknown}
-    return [p for p in candidates if p not in skip], landed, running, unknown
+    eligible = [p for p in candidates if p not in skip]
+    # A stuck pair goes to the back of the line, so a model Kaggle doesn't serve holds up no other.
+    return [p for p in eligible if p not in stuck] + stuck, landed, running, unknown
 
 
 def within_budget(eligible: list, reserve_of, budget: float, size: int) -> list:
