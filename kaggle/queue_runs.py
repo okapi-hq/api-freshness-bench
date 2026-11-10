@@ -64,21 +64,31 @@ def done_pairs(out: Path) -> set:
     return {(r["task"], r["model"]) for r in map(json.loads, path.read_text().splitlines()) if r} if path.exists() else set()
 
 
-def next_batch(pending: list, tries: dict, limit: int) -> tuple:
-    """The pairs that can run: missing, with tries left, and not completed or running on Kaggle already.
+RUNNING = {"Running", "Queued", "Scheduled", "Pending"}
+
+
+def next_batch(pending: list, tries: dict, started: dict, limit: int, stuck_after: float) -> tuple:
+    """The pairs that can run, and why the others wait.
 
     Only a pair started before can be running or done on Kaggle, so only those cost a status call
     (Kaggle rate-limits them). A completed one is waiting for its download: fetched, not run again.
+    A run Kaggle still calls running `stuck_after` seconds after it started no longer holds the
+    queue: the pair is started again. A task whose status Kaggle didn't return is skipped this turn.
     """
+    now = time.time()
     candidates = [p for p in pending if tries.get("|".join(p), 0) < limit]
     tried = [p for p in candidates if tries.get("|".join(p), 0) > 0]
     seen = {t: statuses(t) for t in dict.fromkeys(t for t, _ in tried)}
+    unknown = {t for t, s in seen.items() if not s}
     landed = [(t, m) for t, m in tried if seen[t].get(m) == "Completed"]
     for t, m in landed:
         tries[f"{t}|{m}"] = tries.get(f"{t}|{m}", 0) + 1
-    running = [(t, m) for t, m in tried if seen[t].get(m) in {"Running", "Queued", "Scheduled", "Pending"} or not seen[t]]
-    busy = set(landed) | set(running)
-    return [p for p in candidates if p not in busy], landed, running
+    running = []
+    for t, m in tried:
+        if seen[t].get(m) in RUNNING and now - started.setdefault(f"{t}|{m}", now) < stuck_after:
+            running.append((t, m))
+    skip = set(landed) | set(running) | {p for p in tried if p[0] in unknown}
+    return [p for p in candidates if p not in skip], landed, running, unknown
 
 
 def within_budget(eligible: list, reserve_of, budget: float, size: int) -> list:
@@ -96,21 +106,24 @@ def within_budget(eligible: list, reserve_of, budget: float, size: int) -> list:
     return batch
 
 
-def start_batch(batch: list, tries: dict) -> None:
+def start_batch(batch: list, tries: dict, started: dict) -> None:
     for task in dict.fromkeys(t for t, _ in batch):
         models = [m for t, m in batch if t == task]
         if start([task], models):
             for m in models:
                 tries[f"{task}|{m}"] = tries.get(f"{task}|{m}", 0) + 1
+                started[f"{task}|{m}"] = time.time()
 
 
 def loop(args, tasks: list, out: Path) -> int:
     state_path = out / "queue-state.json"
     tries = json.loads(state_path.read_text()) if state_path.exists() else {}
+    started_path = out / "queue-started.json"
+    started = json.loads(started_path.read_text()) if started_path.exists() else {}
     fetch = None
     while True:
         try:
-            fetch = step(args, tasks, out, state_path, tries, fetch)
+            fetch = step(args, tasks, out, (state_path, tries), (started_path, started), fetch)
         except subprocess.SubprocessError as err:
             log(f"Kaggle did not answer ({type(err).__name__}), trying again in 5 minutes")
             time.sleep(300)
@@ -118,13 +131,20 @@ def loop(args, tasks: list, out: Path) -> int:
             return 0
 
 
-def step(args, tasks: list, out: Path, state_path: Path, tries: dict, fetch):
+def step(args, tasks: list, out: Path, state: tuple, starts: tuple, fetch):
     """One turn of the queue; returns the tasks to download on the next turn, or "done"."""
+    (state_path, tries), (started_path, started) = state, starts
     collect.collect(out, fetch)
     done = done_pairs(out)
     pending = [(t, m) for m in args.model for t in tasks if (t, m) not in done]
-    eligible, landed, running = next_batch(pending, tries, args.tries)
+    eligible, landed, running, unknown = next_batch(pending, tries, started, args.tries, args.stuck_after * 60)
     state_path.write_text(json.dumps(tries))
+    started_path.write_text(json.dumps(started))
+    if unknown:
+        # Kaggle is rate-limiting: back off instead of asking again every minute.
+        log(f"Kaggle didn't return the status of {len(unknown)} tasks: waiting 5 minutes")
+        time.sleep(300)
+        return list(unknown)
     if landed or running:
         log(f"{len(landed)} runs completed but not downloaded, {len(running)} still running: waiting")
         time.sleep(60)
@@ -139,8 +159,9 @@ def step(args, tasks: list, out: Path, state_path: Path, tries: dict, fetch):
         log(f"${left:.2f} left today, waiting")
         time.sleep(args.every * 60)
         return []
-    start_batch(batch, tries)
+    start_batch(batch, tries, started)
     state_path.write_text(json.dumps(tries))
+    started_path.write_text(json.dumps(started))
     models = ", ".join(f"{m} x{n}" for m, n in Counter(m for _, m in batch).items())
     log(f"${left:.2f} left, started {len(batch)} ({models}), {len(pending)} pending")
     wait_for(batch, args.lost_after * 60, args.give_up * 60)
@@ -160,6 +181,7 @@ def main() -> int:
     ap.add_argument("--lost-after", type=float, default=10, help="minutes before an unstarted run counts as dropped")
     ap.add_argument("--give-up", type=float, default=45, help="minutes to wait for a batch at most")
     ap.add_argument("--tries", type=int, default=3)
+    ap.add_argument("--stuck-after", type=float, default=60, help="minutes after which a run still running no longer holds the queue")
     args = ap.parse_args()
     args.reserves = json.loads(Path(args.reserves).read_text()) if args.reserves else {}
     tasks = [t["id"] for t in json.loads((HERE / "tasks.json").read_text())["tasks"]]

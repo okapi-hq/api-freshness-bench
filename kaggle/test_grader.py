@@ -88,6 +88,24 @@ class Queue(unittest.TestCase):
         self.assertEqual(queue_runs.within_budget(eligible, cost, 0.5, 12), [("t1", "flash"), ("t2", "flash")])
         self.assertEqual(queue_runs.within_budget(eligible, cost, 0.05, 12), [])
 
+    def test_stuck_runs_and_unanswered_statuses_do_not_hold_the_queue(self):
+        status = {"t1": {"m": "Running"}, "t2": {"m": "Running"}, "t3": {}, "t4": {"m": "Completed"}, "t5": {"m": "Errored"}}
+        pending = [("t1", "m"), ("t2", "m"), ("t3", "m"), ("t4", "m"), ("t5", "m"), ("t6", "m")]
+        tries = {f"{t}|m": 1 for t in ("t1", "t2", "t3", "t4", "t5")}
+        now = queue_runs.time.time()
+        started = {"t1|m": now - 120, "t2|m": now - 7200}
+        real = queue_runs.statuses
+        queue_runs.statuses = lambda task: status[task]
+        try:
+            eligible, landed, running, unknown = queue_runs.next_batch(pending, tries, started, 6, 3600)
+        finally:
+            queue_runs.statuses = real
+        self.assertEqual(running, [("t1", "m")])
+        self.assertEqual(landed, [("t4", "m")])
+        self.assertEqual(unknown, {"t3"})
+        self.assertEqual(eligible, [("t2", "m"), ("t5", "m"), ("t6", "m")])
+        self.assertEqual(tries["t4|m"], 2)
+
     def test_kaggle_slugs_find_their_models_dev_price(self):
         catalog = {"anthropic": {"models": {"claude-opus-5-5": {"cost": {"input": 4, "output": 20}}}},
                    "openai": {"models": {"gpt-5.4": {"cost": {"input": 2.5, "output": 15}}}}}
