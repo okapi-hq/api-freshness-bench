@@ -42,3 +42,4 @@
 {"id": "openaq-pm25-js-41", "task": "openaq-pm25-js", "answer": "```js\nconst options = { hostname: \"api.openaq.org\", path: \"/v2/latest?city=\" + city };\nhttps.get(options, onResponse);\n```", "verdict": "broken"}
 {"id": "xai-grok-py-42", "task": "xai-grok-py", "answer": "**app.py**\n```python\nfrom openai import OpenAI\nclient = OpenAI(base_url=\"https://api.x.ai/v1\", api_key=key)\nclient.chat.completions.create(model=\"grok-1\", messages=messages)\n```", "verdict": "broken"}
 {"id": "anthropic-thinking-ts-43", "task": "anthropic-thinking-ts", "answer": "```ts\nconst msg = await client.messages.create({ model: \"claude-sonnet-20241022\", max_tokens: 1024, messages });\n```", "verdict": "broken"}
+{"id": "anthropic-thinking-ts-44", "task": "anthropic-thinking-ts", "answer": "```ts\nconst msg = await client.messages.create({ model: \"claude-sonnet-20250514\", max_tokens: 1024, messages });\n```", "verdict": "broken"}

@@ -8590,6 +8590,12 @@
      ],
      "candidate": "(?<=[\"'`=:\\s/])(claude-(?:\\d|instant|opus|sonnet|haiku|fable|mythos|v\\d)[\\w.-]*)(?=[\"'`\\s,;)}\\]:@]|$)",
      "candidateFlags": "gm",
+     "unknownAs": {
+      "outcome": "invalid",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "origin": "provider",
+      "note": "Not a Claude model id Anthropic serves or ever served."
+     },
      "absent": "missing"
     },
     {
@@ -9337,6 +9343,12 @@
      ],
      "candidate": "(?<=[\"'`=:\\s/])(claude-(?:\\d|instant|opus|sonnet|haiku|fable|mythos|v\\d)[\\w.-]*)(?=[\"'`\\s,;)}\\]:@]|$)",
      "candidateFlags": "gm",
+     "unknownAs": {
+      "outcome": "invalid",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "origin": "provider",
+      "note": "Not a Claude model id Anthropic serves or ever served."
+     },
      "absent": "missing"
     },
     {
@@ -10084,6 +10096,12 @@
      ],
      "candidate": "(?<=[\"'`=:\\s/])(claude-(?:\\d|instant|opus|sonnet|haiku|fable|mythos|v\\d)[\\w.-]*)(?=[\"'`\\s,;)}\\]:@]|$)",
      "candidateFlags": "gm",
+     "unknownAs": {
+      "outcome": "invalid",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "origin": "provider",
+      "note": "Not a Claude model id Anthropic serves or ever served."
+     },
      "absent": "missing"
     },
     {
