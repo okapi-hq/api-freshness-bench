@@ -127,6 +127,14 @@ export const DATA_TASKS: Task[] = [
           fails('2025-01-31', undefined, OPENAQ, { quote: 'The OpenAQ version 1 and version 2 endpoints were retired on January 31, 2025 and are no longer accessible.' }),
         ),
         rule('v3', 'OpenAQ v3', 'api\\.openaq\\.org/v3(?![\\d])', current(OPENAQ)),
+        // The host and the path written apart, as Node's https.request takes them.
+        rule(
+          'v1-v2-split',
+          'OpenAQ v1/v2',
+          'api\\.openaq\\.org[\\s\\S]{0,800}?["\'`]/v[12]/(?:latest|measurements|locations|cities|countries|parameters|sources)\\b|["\'`]/v[12]/(?:latest|measurements|locations|cities|countries|parameters|sources)\\b[\\s\\S]{0,800}?api\\.openaq\\.org',
+          fails('2025-01-31', undefined, OPENAQ, { quote: 'The OpenAQ version 1 and version 2 endpoints were retired on January 31, 2025 and are no longer accessible.' }),
+        ),
+        rule('v3-split', 'OpenAQ v3', 'api\\.openaq\\.org[\\s\\S]{0,800}?["\'`]/v3/(?:locations|sensors|latest|measurements|parameters|countries|providers|instruments|owners)\\b|["\'`]/v3/(?:locations|sensors|latest|measurements|parameters|countries|providers|instruments|owners)\\b[\\s\\S]{0,800}?api\\.openaq\\.org', current(OPENAQ)),
       ]),
     ],
   },
