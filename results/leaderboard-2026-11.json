@@ -1,0 +1,759 @@
+{
+ "edition": "2026-10-24",
+ "collected": "2026-11-05 to 2026-11-12",
+ "answers": 1632,
+ "leaderboard": [
+  {
+   "model": "gpt-6-astra",
+   "n": 48,
+   "clean": 32,
+   "rate": 0.6666666666666666,
+   "ci": [
+    0.5253984633247204,
+    0.783233986291032
+   ],
+   "broken": 5,
+   "at_risk": 8,
+   "deprecated": 3,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-6-sol",
+   "n": 48,
+   "clean": 30,
+   "rate": 0.625,
+   "ci": [
+    0.48362506125249566,
+    0.7478492759593187
+   ],
+   "broken": 5,
+   "at_risk": 8,
+   "deprecated": 5,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "n": 48,
+   "clean": 30,
+   "rate": 0.625,
+   "ci": [
+    0.48362506125249566,
+    0.7478492759593187
+   ],
+   "broken": 5,
+   "at_risk": 8,
+   "deprecated": 5,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-sonnet-5-5-default",
+   "n": 48,
+   "clean": 29,
+   "rate": 0.6041666666666666,
+   "ci": [
+    0.4631015459693511,
+    0.7297937350404942
+   ],
+   "broken": 7,
+   "at_risk": 8,
+   "deprecated": 4,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.6-sol",
+   "n": 48,
+   "clean": 29,
+   "rate": 0.6041666666666666,
+   "ci": [
+    0.4631015459693511,
+    0.7297937350404942
+   ],
+   "broken": 5,
+   "at_risk": 8,
+   "deprecated": 6,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-5-5-default",
+   "n": 48,
+   "clean": 28,
+   "rate": 0.5833333333333334,
+   "ci": [
+    0.44281082215364653,
+    0.7115054026542299
+   ],
+   "broken": 6,
+   "at_risk": 7,
+   "deprecated": 7,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.6-terra",
+   "n": 48,
+   "clean": 28,
+   "rate": 0.5833333333333334,
+   "ci": [
+    0.44281082215364653,
+    0.7115054026542299
+   ],
+   "broken": 7,
+   "at_risk": 7,
+   "deprecated": 5,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.6-luna",
+   "n": 48,
+   "clean": 27,
+   "rate": 0.5625,
+   "ci": [
+    0.4227477150100165,
+    0.6929894535958907
+   ],
+   "broken": 6,
+   "at_risk": 8,
+   "deprecated": 7,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-6-luna",
+   "n": 48,
+   "clean": 27,
+   "rate": 0.5625,
+   "ci": [
+    0.4227477150100165,
+    0.6929894535958907
+   ],
+   "broken": 6,
+   "at_risk": 9,
+   "deprecated": 5,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "n": 48,
+   "clean": 26,
+   "rate": 0.5416666666666666,
+   "ci": [
+    0.4029083309494732,
+    0.6742497814544648
+   ],
+   "broken": 7,
+   "at_risk": 9,
+   "deprecated": 6,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-4-argon",
+   "n": 48,
+   "clean": 25,
+   "rate": 0.5208333333333334,
+   "ci": [
+    0.3832899563598438,
+    0.6552890998421255
+   ],
+   "broken": 11,
+   "at_risk": 4,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-5-default",
+   "n": 48,
+   "clean": 24,
+   "rate": 0.5,
+   "ci": [
+    0.36389098932037767,
+    0.6361090106796223
+   ],
+   "broken": 7,
+   "at_risk": 8,
+   "deprecated": 9,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.5-2026-04-23",
+   "n": 48,
+   "clean": 20,
+   "rate": 0.4166666666666667,
+   "ci": [
+    0.28849459734577015,
+    0.5571891778463536
+   ],
+   "broken": 13,
+   "at_risk": 7,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-4-7-default",
+   "n": 48,
+   "clean": 18,
+   "rate": 0.375,
+   "ci": [
+    0.2521507240406812,
+    0.5163749387475043
+   ],
+   "broken": 12,
+   "at_risk": 10,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-4-8-default",
+   "n": 48,
+   "clean": 16,
+   "rate": 0.3333333333333333,
+   "ci": [
+    0.2167660137089678,
+    0.47460153667527943
+   ],
+   "broken": 14,
+   "at_risk": 9,
+   "deprecated": 9,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "n": 48,
+   "clean": 15,
+   "rate": 0.3125,
+   "ci": [
+    0.19945512167731494,
+    0.4533333725049633
+   ],
+   "broken": 16,
+   "at_risk": 6,
+   "deprecated": 10,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "n": 48,
+   "clean": 15,
+   "rate": 0.3125,
+   "ci": [
+    0.19945512167731494,
+    0.4533333725049633
+   ],
+   "broken": 20,
+   "at_risk": 5,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.4-2026-03-05",
+   "n": 48,
+   "clean": 15,
+   "rate": 0.3125,
+   "ci": [
+    0.19945512167731494,
+    0.4533333725049633
+   ],
+   "broken": 15,
+   "at_risk": 7,
+   "deprecated": 10,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "claude-sonnet-5-default",
+   "n": 48,
+   "clean": 14,
+   "rate": 0.2916666666666667,
+   "ci": [
+    0.18241416061863377,
+    0.43179527736167544
+   ],
+   "broken": 19,
+   "at_risk": 7,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3.1-pro-preview",
+   "n": 48,
+   "clean": 14,
+   "rate": 0.2916666666666667,
+   "ci": [
+    0.18241416061863377,
+    0.43179527736167544
+   ],
+   "broken": 21,
+   "at_risk": 5,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-4-5-20251101",
+   "n": 48,
+   "clean": 13,
+   "rate": 0.2708333333333333,
+   "ci": [
+    0.16565803561632889,
+    0.40997234616201117
+   ],
+   "broken": 22,
+   "at_risk": 6,
+   "deprecated": 7,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "claude-sonnet-4-6-default",
+   "n": 48,
+   "clean": 13,
+   "rate": 0.2708333333333333,
+   "ci": [
+    0.16565803561632889,
+    0.40997234616201117
+   ],
+   "broken": 20,
+   "at_risk": 7,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "n": 48,
+   "clean": 13,
+   "rate": 0.2708333333333333,
+   "ci": [
+    0.16565803561632889,
+    0.40997234616201117
+   ],
+   "broken": 22,
+   "at_risk": 5,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3-flash-preview",
+   "n": 48,
+   "clean": 12,
+   "rate": 0.25,
+   "ci": [
+    0.1492048880971003,
+    0.3878464374792707
+   ],
+   "broken": 24,
+   "at_risk": 5,
+   "deprecated": 6,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "claude-haiku-4-5-20251001",
+   "n": 48,
+   "clean": 11,
+   "rate": 0.22916666666666666,
+   "ci": [
+    0.13307691028989044,
+    0.36539535908451154
+   ],
+   "broken": 24,
+   "at_risk": 6,
+   "deprecated": 5,
+   "missing": 2,
+   "unknown": 0
+  },
+  {
+   "model": "claude-opus-4-6-default",
+   "n": 48,
+   "clean": 11,
+   "rate": 0.22916666666666666,
+   "ci": [
+    0.13307691028989044,
+    0.36539535908451154
+   ],
+   "broken": 22,
+   "at_risk": 7,
+   "deprecated": 8,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gemma-4-26b-a4b-it",
+   "n": 48,
+   "clean": 10,
+   "rate": 0.20833333333333334,
+   "ci": [
+    0.11730147795889813,
+    0.3425917352135348
+   ],
+   "broken": 24,
+   "at_risk": 5,
+   "deprecated": 8,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.4-nano-2026-03-17",
+   "n": 48,
+   "clean": 10,
+   "rate": 0.20833333333333334,
+   "ci": [
+    0.11730147795889813,
+    0.3425917352135348
+   ],
+   "broken": 25,
+   "at_risk": 6,
+   "deprecated": 5,
+   "missing": 2,
+   "unknown": 0
+  },
+  {
+   "model": "gemma-4-31b-it",
+   "n": 48,
+   "clean": 9,
+   "rate": 0.1875,
+   "ci": [
+    0.10191276348200173,
+    0.31940139348846214
+   ],
+   "broken": 22,
+   "at_risk": 6,
+   "deprecated": 10,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-2.5-pro",
+   "n": 48,
+   "clean": 8,
+   "rate": 0.16666666666666666,
+   "ci": [
+    0.08695410039453222,
+    0.29578100037396254
+   ],
+   "broken": 24,
+   "at_risk": 6,
+   "deprecated": 6,
+   "missing": 4,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-5.4-mini-2026-03-17",
+   "n": 48,
+   "clean": 8,
+   "rate": 0.16666666666666666,
+   "ci": [
+    0.08695410039453222,
+    0.29578100037396254
+   ],
+   "broken": 23,
+   "at_risk": 6,
+   "deprecated": 10,
+   "missing": 1,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-2.5-flash",
+   "n": 48,
+   "clean": 7,
+   "rate": 0.14583333333333334,
+   "ci": [
+    0.07248157413793963,
+    0.27167447042858606
+   ],
+   "broken": 22,
+   "at_risk": 5,
+   "deprecated": 8,
+   "missing": 6,
+   "unknown": 0
+  },
+  {
+   "model": "gemini-3.1-flash-lite-preview",
+   "n": 48,
+   "clean": 7,
+   "rate": 0.14583333333333334,
+   "ci": [
+    0.07248157413793963,
+    0.27167447042858606
+   ],
+   "broken": 23,
+   "at_risk": 6,
+   "deprecated": 12,
+   "missing": 0,
+   "unknown": 0
+  },
+  {
+   "model": "gpt-oss-120b",
+   "n": 48,
+   "clean": 5,
+   "rate": 0.10416666666666667,
+   "ci": [
+    0.045321050901178245,
+    0.2216768812614093
+   ],
+   "broken": 25,
+   "at_risk": 5,
+   "deprecated": 6,
+   "missing": 6,
+   "unknown": 1
+  }
+ ],
+ "tasks": [
+  {
+   "task": "deepseek-py",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "groq-chat-nextjs",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "hubspot-contact-py",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "openai-image-py",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "openai-support-assistant-ts",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "openai-transcribe-node",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "openai-commit-go",
+   "clean": 0,
+   "models": 34
+  },
+  {
+   "task": "a2a-client-ts",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "assemblyai-podcast-node",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "openai-summarize-py",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "resend-newsletter-ts",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "spotify-similar-js",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "xai-grok-py",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "anthropic-extract-py",
+   "clean": 1,
+   "models": 34
+  },
+  {
+   "task": "anthropic-cli-rust",
+   "clean": 2,
+   "models": 34
+  },
+  {
+   "task": "anthropic-thinking-ts",
+   "clean": 3,
+   "models": 34
+  },
+  {
+   "task": "jupiter-swap-ts",
+   "clean": 6,
+   "models": 34
+  },
+  {
+   "task": "fcm-push-node",
+   "clean": 9,
+   "models": 34
+  },
+  {
+   "task": "frankfurter-convert-js",
+   "clean": 9,
+   "models": 34
+  },
+  {
+   "task": "facebook-page-post-node",
+   "clean": 10,
+   "models": 34
+  },
+  {
+   "task": "linkedin-followers-py",
+   "clean": 10,
+   "models": 34
+  },
+  {
+   "task": "openrouter-free-py",
+   "clean": 10,
+   "models": 34
+  },
+  {
+   "task": "openweather-forecast-py",
+   "clean": 10,
+   "models": 34
+  },
+  {
+   "task": "mcp-linear-config",
+   "clean": 11,
+   "models": 34
+  },
+  {
+   "task": "shopify-products-node",
+   "clean": 11,
+   "models": 34
+  },
+  {
+   "task": "etherscan-balance-php",
+   "clean": 12,
+   "models": 34
+  },
+  {
+   "task": "gemini-android-kotlin",
+   "clean": 12,
+   "models": 34
+  },
+  {
+   "task": "hf-sentiment-py",
+   "clean": 12,
+   "models": 34
+  },
+  {
+   "task": "mcp-client-py",
+   "clean": 13,
+   "models": 34
+  },
+  {
+   "task": "mcp-client-ts",
+   "clean": 15,
+   "models": 34
+  },
+  {
+   "task": "gemini-embed-ts",
+   "clean": 16,
+   "models": 34
+  },
+  {
+   "task": "youtube-related-py",
+   "clean": 16,
+   "models": 34
+  },
+  {
+   "task": "openaq-pm25-js",
+   "clean": 16,
+   "models": 34
+  },
+  {
+   "task": "usps-rates-py",
+   "clean": 17,
+   "models": 34
+  },
+  {
+   "task": "telegram-news-py",
+   "clean": 18,
+   "models": 34
+  },
+  {
+   "task": "telegram-post-go",
+   "clean": 18,
+   "models": 34
+  },
+  {
+   "task": "gemini-classify-py",
+   "clean": 20,
+   "models": 34
+  },
+  {
+   "task": "coinbase-balances-py",
+   "clean": 22,
+   "models": 34
+  },
+  {
+   "task": "web-search-py",
+   "clean": 22,
+   "models": 34
+  },
+  {
+   "task": "mcp-server-py",
+   "clean": 23,
+   "models": 34
+  },
+  {
+   "task": "msgraph-alerts-py",
+   "clean": 25,
+   "models": 34
+  },
+  {
+   "task": "paypal-orders-node",
+   "clean": 27,
+   "models": 34
+  },
+  {
+   "task": "stripe-checkout-react",
+   "clean": 30,
+   "models": 34
+  },
+  {
+   "task": "slack-upload-py",
+   "clean": 31,
+   "models": 34
+  },
+  {
+   "task": "discord-slash-js",
+   "clean": 34,
+   "models": 34
+  },
+  {
+   "task": "ga-pageviews-py",
+   "clean": 34,
+   "models": 34
+  },
+  {
+   "task": "google-signin-html",
+   "clean": 34,
+   "models": 34
+  },
+  {
+   "task": "x-search-py",
+   "clean": 34,
+   "models": 34
+  }
+ ]
+}
