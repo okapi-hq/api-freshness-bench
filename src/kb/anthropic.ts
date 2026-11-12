@@ -77,6 +77,13 @@ export function anthropicModelSlot(): Slot {
     rules: ANTHROPIC_MODEL_RULES,
     candidate: ANTHROPIC_CANDIDATE,
     candidateFlags: 'gm',
+    // The list above is Anthropic's whole catalog: a Claude-shaped id it doesn't hold was never served.
+    unknownAs: {
+      outcome: 'invalid',
+      source: ANTHROPIC_DEPRECATIONS,
+      origin: 'provider',
+      note: 'Not a Claude model id Anthropic serves or ever served.',
+    },
     absent: 'missing',
   };
 }
