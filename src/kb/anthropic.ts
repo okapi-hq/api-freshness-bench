@@ -30,6 +30,7 @@ const ROWS: Row[] = [
   ['claude-haiku-4-5'],
   ['claude-haiku-4-5-20251001'],
   ['claude-opus-4-5-20250514', { outcome: 'invalid', source: ANTHROPIC_DEPRECATIONS, origin: 'provider', note: 'Not a Claude model id: Claude Opus 4.5 is claude-opus-4-5-20251101.' }],
+  ['claude-sonnet-20241022', { outcome: 'invalid', source: ANTHROPIC_DEPRECATIONS, origin: 'provider', note: 'Not a Claude model id: Claude 3.5 Sonnet was claude-3-5-sonnet-20241022.' }],
   ['claude-opus-4-5'],
   ['claude-opus-4-5-20251101'],
   ['claude-opus-4-6'],

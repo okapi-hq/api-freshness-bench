@@ -1,5 +1,5 @@
 import type { Slot } from '../types.ts';
-import { current, deprecated, fails, modelRules, redirected, rowsFrom, type Row } from './facts.ts';
+import { current, deprecated, fails, invalid, modelRules, redirected, rowsFrom, type Row } from './facts.ts';
 
 /** Groq, DeepSeek and xAI model tables, from Okapi's model registry and their pages. */
 
@@ -98,6 +98,8 @@ export function xaiModelSlot(): Slot {
     id: 'model',
     label: 'Model',
     rules: modelRules([
+      { id: 'grok-1', fact: invalid(XAI, { note: 'Not a model the xAI API serves: Grok-1 is an open-weights release.' }) },
+      { id: 'grok-1.0', fact: invalid(XAI, { note: 'Not a model the xAI API serves: Grok-1 is an open-weights release.' }) },
       { id: 'grok-beta', fact: fails('2025-04-15', undefined, XAI, { origin: 'provider' }) },
       { id: 'grok-vision-beta', fact: fails('2025-04-15', undefined, XAI, { origin: 'provider' }) },
       { id: 'grok-2', fact: fails('2026-10-14', undefined, XAI) },

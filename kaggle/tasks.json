@@ -8420,6 +8420,18 @@
        }
       },
       {
+       "id": "claude-sonnet-20241022",
+       "label": "claude-sonnet-20241022",
+       "pattern": "(?<=^|[\"'`=:\\s/(,\\[])claude-sonnet-20241022(?=[\"'`\\s,;)}\\]:]|$)",
+       "flags": "im",
+       "fact": {
+        "outcome": "invalid",
+        "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+        "origin": "provider",
+        "note": "Not a Claude model id: Claude 3.5 Sonnet was claude-3-5-sonnet-20241022."
+       }
+      },
+      {
        "id": "claude-opus-4-5",
        "label": "claude-opus-4-5",
        "pattern": "(?<=^|[\"'`=:\\s/(,\\[])claude-opus-4-5(?=[\"'`\\s,;)}\\]:]|$)",
@@ -9155,6 +9167,18 @@
        }
       },
       {
+       "id": "claude-sonnet-20241022",
+       "label": "claude-sonnet-20241022",
+       "pattern": "(?<=^|[\"'`=:\\s/(,\\[])claude-sonnet-20241022(?=[\"'`\\s,;)}\\]:]|$)",
+       "flags": "im",
+       "fact": {
+        "outcome": "invalid",
+        "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+        "origin": "provider",
+        "note": "Not a Claude model id: Claude 3.5 Sonnet was claude-3-5-sonnet-20241022."
+       }
+      },
+      {
        "id": "claude-opus-4-5",
        "label": "claude-opus-4-5",
        "pattern": "(?<=^|[\"'`=:\\s/(,\\[])claude-opus-4-5(?=[\"'`\\s,;)}\\]:]|$)",
@@ -9887,6 +9911,18 @@
         "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
         "origin": "provider",
         "note": "Not a Claude model id: Claude Opus 4.5 is claude-opus-4-5-20251101."
+       }
+      },
+      {
+       "id": "claude-sonnet-20241022",
+       "label": "claude-sonnet-20241022",
+       "pattern": "(?<=^|[\"'`=:\\s/(,\\[])claude-sonnet-20241022(?=[\"'`\\s,;)}\\]:]|$)",
+       "flags": "im",
+       "fact": {
+        "outcome": "invalid",
+        "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+        "origin": "provider",
+        "note": "Not a Claude model id: Claude 3.5 Sonnet was claude-3-5-sonnet-20241022."
        }
       },
       {
@@ -17963,6 +17999,30 @@
      "label": "Model",
      "rules": [
       {
+       "id": "grok-1",
+       "label": "grok-1",
+       "pattern": "(?<=^|[\"'`=:\\s/(,\\[])grok-1(?=[\"'`\\s,;)}\\]:]|$)",
+       "flags": "im",
+       "fact": {
+        "outcome": "invalid",
+        "source": "https://docs.x.ai/docs/models",
+        "origin": "provider",
+        "note": "Not a model the xAI API serves: Grok-1 is an open-weights release."
+       }
+      },
+      {
+       "id": "grok-1.0",
+       "label": "grok-1.0",
+       "pattern": "(?<=^|[\"'`=:\\s/(,\\[])grok-1\\.0(?=[\"'`\\s,;)}\\]:]|$)",
+       "flags": "im",
+       "fact": {
+        "outcome": "invalid",
+        "source": "https://docs.x.ai/docs/models",
+        "origin": "provider",
+        "note": "Not a model the xAI API serves: Grok-1 is an open-weights release."
+       }
+      },
+      {
        "id": "grok-beta",
        "label": "grok-beta",
        "pattern": "(?<=^|[\"'`=:\\s/(,\\[])grok-beta(?=[\"'`\\s,;)}\\]:]|$)",
@@ -21019,6 +21079,28 @@
        "id": "v3",
        "label": "OpenAQ v3",
        "pattern": "api\\.openaq\\.org/v3(?![\\d])",
+       "fact": {
+        "outcome": "ok",
+        "source": "https://docs.openaq.org/about/about",
+        "origin": "provider"
+       }
+      },
+      {
+       "id": "v1-v2-split",
+       "label": "OpenAQ v1/v2",
+       "pattern": "api\\.openaq\\.org[\\s\\S]{0,800}?[\"'`]/v[12]/(?:latest|measurements|locations|cities|countries|parameters|sources)\\b|[\"'`]/v[12]/(?:latest|measurements|locations|cities|countries|parameters|sources)\\b[\\s\\S]{0,800}?api\\.openaq\\.org",
+       "fact": {
+        "outcome": "fails",
+        "effective": "2025-01-31",
+        "source": "https://docs.openaq.org/about/about",
+        "origin": "okapi",
+        "quote": "The OpenAQ version 1 and version 2 endpoints were retired on January 31, 2025 and are no longer accessible."
+       }
+      },
+      {
+       "id": "v3-split",
+       "label": "OpenAQ v3",
+       "pattern": "api\\.openaq\\.org[\\s\\S]{0,800}?[\"'`]/v3/(?:locations|sensors|latest|measurements|parameters|countries|providers|instruments|owners)\\b|[\"'`]/v3/(?:locations|sensors|latest|measurements|parameters|countries|providers|instruments|owners)\\b[\\s\\S]{0,800}?api\\.openaq\\.org",
        "fact": {
         "outcome": "ok",
         "source": "https://docs.openaq.org/about/about",
